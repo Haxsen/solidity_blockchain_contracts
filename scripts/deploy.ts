@@ -10,11 +10,11 @@ async function main(): Promise<void> {
     
     console.log("Deployer balance:", ethers.formatEther(balance));
 
-    // Get the contract factory for RestakeContract
-    const RestakeContract = await ethers.getContractFactory("RestakeContract");
+    // Get the contract factory for StakeContract
+    const StakeContract = await ethers.getContractFactory("StakeContract");
 
     // Deploy the contract
-    const contract = await RestakeContract.deploy();
+    const contract = await StakeContract.deploy();
     
     console.log("Deployment transaction hash:", contract.deploymentTransaction()?.hash);
 
